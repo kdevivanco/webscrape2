@@ -8180,7 +8180,7 @@ The copyright of all content and materials in this…
     };
 
 
-    let elements = document.querySelectorAll('body strong, h1, a, body span, body h2, body h3, body button,p, footer a, a.link-gray-underline a.site-header__navigation-action, a.site-header__navigation-submenu-action');
+    let elements = document.querySelectorAll('body strong, h1, a:not(a.hover-no-underline), body span:not(span.icon-medium), body h2, body h3, body button,p, footer a, a.link-gray-underline a.site-header__navigation-action, a.site-header__navigation-submenu-action');
     for (let element of elements) {
       if (element.innerText) {
         const originalText = element.innerText
@@ -8194,7 +8194,7 @@ The copyright of all content and materials in this…
           });
       }
     }
-</script>
+  </script>
 </body>
 
 <!-- Mirrored from www.classcentral.com/university/gatech by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 23:52:34 GMT -->

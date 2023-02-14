@@ -8081,7 +8081,7 @@ We first describe the problem of tracking objects in complex scenes. We lo…
   </script>
   <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100717250ns.gif" /></p></noscript>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
     const translate = async (text) => {
       const sourceLang = 'en';
       const targetLang = 'hi';
@@ -8098,7 +8098,7 @@ We first describe the problem of tracking objects in complex scenes. We lo…
     };
 
 
-    let elements = document.querySelectorAll('body strong, h1, a, body span, body h2, body h3, body button,p, footer a, a.link-gray-underline a.site-header__navigation-action, a.site-header__navigation-submenu-action');
+    let elements = document.querySelectorAll('body strong, h1, a:not(a.hover-no-underline), body span:not(span.icon-medium), body h2, body h3, body button,p, footer a, a.link-gray-underline a.site-header__navigation-action, a.site-header__navigation-submenu-action');
     for (let element of elements) {
       if (element.innerText) {
         const originalText = element.innerText
@@ -8112,6 +8112,6 @@ We first describe the problem of tracking objects in complex scenes. We lo…
           });
       }
     }
-</script>
+  </script>
 </body>
 </html>
