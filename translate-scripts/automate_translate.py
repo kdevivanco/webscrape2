@@ -1,7 +1,8 @@
 import os
 import pdb
 
-js_script = '''<script type="text/javascript">
+js_script = '''</noscript>
+<script type="text/javascript">
     const translate = async (text) => {
       const sourceLang = 'en';
       const targetLang = 'hi';
@@ -34,38 +35,7 @@ js_script = '''<script type="text/javascript">
     }
   </script>'''
  
-to_replace='''<script type="text/javascript">
-    const translate = async (text) => {
-      const sourceLang = 'en';
-      const targetLang = 'hi';
-      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&q=${encodeURI(text)}`;
-
-      const response = await fetch(url);
-      const data = await response.json();
-
-      if (data[0][0][0]) {
-        return data[0][0][0];
-      } else {
-        return text;
-      }
-    };
-
-
-    let elements = document.querySelectorAll('body strong, h1, a, body span, body h2, body h3, body button,p, footer a, a.link-gray-underline a.site-header__navigation-action, a.site-header__navigation-submenu-action');
-    for (let element of elements) {
-      if (element.innerText) {
-        const originalText = element.innerText
-        translate(originalText.toString())
-          .then((translatedText) => {
-            element.innerText = translatedText;
-          })
-          .catch((error) => {
-            console.error(error);
-            element.innerText = originalText;
-          });
-      }
-    }
-</script>'''
+to_replace='''</noscript>'''
 
 def add_to_folder(folder_path):
     for filename in os.listdir(folder_path):
@@ -80,6 +50,8 @@ def add_to_folder(folder_path):
             with open(file_path, "w") as f:
                 f.write(content)
 
+
+#TO DO THIS WITH FILES WITHIN DIRECTORIES, I USED OS: 
 
 # # The parent directory containing the child directories with index.html files
 # parent_directory = "/Users/macbookpro/Desktop/Programacion/AllStars2/www.classcentral.com/report"
@@ -99,4 +71,4 @@ def add_to_folder(folder_path):
 # #             with open(file_path, "w") as f:
 #                 f.write(content)
 
-pdb.set_trace()
+pdb.set_trace() #call the function from the terminal
