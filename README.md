@@ -1,4 +1,3 @@
-For this task, I had to scrape a webpage and translate its content to another language. Here's how I did it. 
 
 The functions for translating and automating the script insertion can be found in the directory /translate-scripts 
 
